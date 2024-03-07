@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #414141; color: white">
+    <div style="text-align: center; justify-content: center; margin-top: 5px">
+      <h1>Hey Champ wanna some code let's do it</h1>
+    </div>
+
+    <div
+      style="
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        margin-top: 5px;
+      "
+    >
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+    </div>
+
+    <br />
+
+    <div>
+      <p id="param" style="justify-content: center; text-align: center"></p>
+    </div>
+
+    <script>
+      function updateDay() {
+        const d = new Date();
+        const days = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        document.getElementById("param").textContent = `Today is ${
+          days[d.getDay()]
+        }`;
+      }
+
+      let intervalId;
+
+      document.getElementById("start").addEventListener("click", () => {
+        if (!intervalId) {
+          updateDay();
+          intervalId = setInterval(updateDay, 1000);
+        }
+      });
+
+      document.getElementById("stop").addEventListener("click", () => {
+        clearInterval(intervalId);
+        intervalId = null;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #414141">
+    <div>
+      <ul id="images">
+        <li style="color: white">
+          <img
+            width="200px"
+            id="1"
+            src="https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </li>
+        <
+        <li style="color: white">
+          <img
+            width="200px"
+            id="2"
+            src="https://images.unsplash.com/photo-1527151977613-a89904713c47?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fHw%3D"
+            alt=""
+          />
+        </li>
+        <li style="color: white">
+          <img
+            width="200px"
+            id="3"
+            src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fHw%3D"
+            alt=""
+          />
+        </li>
+        <li style="color: white">
+          <img
+            width="200px"
+            id="4"
+            src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fHw%3D"
+            alt=""
+          />
+        </li>
+        <li style="color: white">
+          <img
+            width="200px"
+            id="5"
+            src="https://images.unsplash.com/photo-1504681869696-d977211a5f4c?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTd8fHxlbnwwfHx8fHw%3D"
+            alt=""
+          />
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    //  const parent = document.querySelector(".li");
+    // document.getElementById("1").addEventListener("click", () => {
+    // alert("1 clicked");
+    //});
+    //document
+    //  .getElementById("3")
+    //  .addEventListener("click", () => alert("3 clicked"));
+    //document
+    // .getElementById("3")
+    // .addEventListener("click", (e) => console.log(e));
+    /*  document.getElementById("images").addEventListener(
+      "click",
+      function (e) {
+        e.preventDefault(), console.log("images clicked");
+      },
+
+      false
+    );
+    document.getElementById("2").addEventListener(
+      "click",
+      function (e) {
+        e.preventDefault(), e.stopPropagation(), console.log("2 clicked");
+      },
+      false
+    ); */
+    document.querySelector("#images").addEventListener(
+      "click",
+      function (e) {
+        console.log(e.target.parentNode);
+        let removeit = e.target.parentNode;
+        // removeit.remove();
+        removeit.parentNode.removeChild(removeit);
+      },
+      false
+    );
+  </script>
+</html>

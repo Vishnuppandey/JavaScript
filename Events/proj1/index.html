@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #414141">
+    <h1 id="1">Vishnu Pandey</h1>
+    <button id="btn">Stop</button>
+  </body>
+  <script>
+    let change = function () {
+      document.getElementById("1").innerText = "Have some fun";
+      console.log();
+    };
+    const changeME = setTimeout(change, 2000);
+
+    document.querySelector("#btn").addEventListener("click", function () {
+      clearTimeout(changeME);
+    });
+  </script>
+</html>
